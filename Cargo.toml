@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/falcon-core",
+    "crates/falcon-cli"
+]
+resolver = "2"
