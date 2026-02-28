@@ -9,3 +9,4 @@ pub mod bindings {
 // Povezujemo naš novi modul za ključeve
 pub mod keygen;
 pub mod sign;
+pub mod batch;

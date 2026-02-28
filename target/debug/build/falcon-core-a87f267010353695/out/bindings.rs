@@ -298,3 +298,23 @@ extern "C" {
         pk: *const u8,
     ) -> ::std::os::raw::c_int;
 }
+extern "C" {
+    pub fn falcon512_batch_verify_same_key(
+        pk: *const u8,
+        msgs: *mut *const u8,
+        msg_lens: *const usize,
+        sigs: *mut *const u8,
+        sig_lens: *const usize,
+        num_sigs: usize,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn falcon512_batch_verify_diff_keys(
+        pks: *mut *const u8,
+        msgs: *mut *const u8,
+        msg_lens: *const usize,
+        sigs: *mut *const u8,
+        sig_lens: *const usize,
+        num_sigs: usize,
+    ) -> ::std::os::raw::c_int;
+}

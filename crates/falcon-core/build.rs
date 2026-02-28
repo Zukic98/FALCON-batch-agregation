@@ -36,7 +36,7 @@ fn main() {
     // 3. Generisanje Rust bindinga (bazirano na glavnom API-ju Falcona)
     let bindings = bindgen::Builder::default()
         .header("c-source/falcon512/api.h") // api.h je glavni fajl u PQClean-u
-        // Dodajemo i common headere ako bindgenu zatrebaju
+        .header("c-source/falcon512/batch_vrfy.h")// Dodajemo i common headere ako bindgenu zatrebaju
         .clang_arg("-I./c-source/common")
         .clang_arg("-I./c-source/falcon512")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
